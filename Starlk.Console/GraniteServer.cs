@@ -104,7 +104,7 @@ internal sealed class GraniteServer
     {
         clients.Remove(client);
 
-        if (clients.Count < 2)
+        if (clients.Count == 0)
         {
             await Session.CancelAsync();
         }
